@@ -1,0 +1,61 @@
+body{
+    background-color: #ad9e9e;
+    align-items: center;
+    height: auto;
+}
+
+h3{
+    font-weight: bold;
+}
+
+button{
+    width: 100%;
+    margin-top: 13px;
+    height: 80%;
+}
+
+form{
+    margin-top: 25px;
+}
+
+.cardd{
+    width: 50%;
+    background-color: inherit;
+    margin: 30px 25%;
+}
+
+.container{
+    width: 50%;
+    height: 80%;
+    background-color: #f1f1f1;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow:  0 0 10px 1px black;
+    padding: 20px;
+    padding-bottom: 5px;
+    align-items: center;
+}
+
+
+#login{
+    margin-top: 20px;
+}
+
+#nama input {
+    display: inline-block;
+    float: left;
+    width: 48%;
+    margin-bottom: 13px;
+}
+
+#nama #firstname{
+    margin-right: 4%;
+}
+
+#nama{
+    margin-bottom: 30px;
+}
+
+form div{
+    margin-bottom: 13px;
+}
