@@ -3,13 +3,16 @@ body{
     height: 1000px;
 }
 
+.container{
+    margin-top: 150px;
+}
+
 nav a{
     margin-right: 20px;
 }
 
 i{
     color: #525252;
-    /* background-color: black; */
 }
 
 .navbarr div ul li a{
@@ -22,6 +25,21 @@ i{
     background-color: #f1f1f1 !important;
     color: black !important;
     height: 70px !important;
+}
+
+.boks {
+    height: 100px !important;
+}
+
+.card:hover{
+    transform: scale(1.02);
+}
+
+
+.card-img-top {
+    width: 50%;
+    height: 20vw;
+    object-fit: cover;
 }
 
 .ling::after{
@@ -38,14 +56,65 @@ i{
     transition: width .5s;
 }
 
-.searchinput{
-    width: 0;
+.kartu{
+    margin-top: 50px;
 }
 
 
-.search:hover > .searchinput{
+.search:hover > .searchengine{
     width: 100%;
 }
 
+.kartu h5{
+    text-decoration: none;
+    color: white;
+}
 
+.card h5:hover{
+    text-decoration: none;
+    color: rgb(209, 209, 209);
+    transition: .1s;
+}
+
+.why{
+    min-height: 400px;
+    margin-top: 400px;
+    background-color: #ddd;
+    color: black;
+    padding-top: 50px;
+}
+
+.why li{
+    display: inline-block;
+    margin: 50px;
+}
+
+.why li div{
+    width: 200px;
+    height: inherit;
+    overflow: hidden;
+}
+
+.why li p{
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.why li div img{
+    line-height: 100px;
+}
+
+.whyy{
+    margin: 0 20px;
+}
+
+.footer{
+    background-color: #f1f1f1;
+    padding-top: 15px;
+}
+
+.footer p a{
+    color: black;
+    text-decoration: none;
+}
 
