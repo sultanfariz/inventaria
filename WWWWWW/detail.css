@@ -1,6 +1,6 @@
 body{
     background-color: #f1f1f1 !important;
-    height: 1000px;
+    height: auto;
 }
 
 .container{
@@ -51,3 +51,17 @@ i{
     text-decoration: none;
 }
 
+.wa h5{
+    background-color: darkgreen;
+    font-size: 20px;
+    color: white;
+    padding: 5px;
+    border-radius: 20%;
+}
+
+.wa{
+    position: fixed;
+    bottom: 30px;
+    right: 20%;
+    width: auto;
+}
