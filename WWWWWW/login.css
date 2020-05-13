@@ -45,12 +45,12 @@ form{
     margin-top: 40px;
 }
 
-#nama input {
+/* #nama input {
     display: inline-block;
     float: left;
     width: 48%;
     margin-bottom: 15px;
-}
+} */
 
 #nama #firstname{
     margin-right: 4%;
