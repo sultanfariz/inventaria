@@ -12,7 +12,7 @@
                 <div class="col-lg">
                     <div class="p-5">
 
-                        <form class="user" method="post" action="<?= base_url('auth/registration'); ?>">
+                        <form class="user" method="post" action="<?= base_url('barang/tambah'); ?>">
 
                             <div class=" form-group">
                                 <input type="text" class="form-control " id="nama_barang" placeholder="Nama Barang" name="nama_barang" value="<?= set_value('nama_barang') ?>">
@@ -32,10 +32,10 @@
                                 <input type="text" class="form-control " id="harga" placeholder="Harga Barang" name="harga" value="<?= set_value('harga') ?>">
                                 <?= form_error('harga', ' <small class="text-danger pl-3">', '</small>'); ?>
                             </div>
-                            <div class=" form-group">
+                            <!-- <div class=" form-group">
                                 <input type="text" class="form-control " id="nomor_penyedia" placeholder="Kontak Penyedia" name="nomor_penyedia" value="<?= set_value('nomor_penyedia') ?>">
                                 <?= form_error('nomor_penyedia', ' <small class="text-danger pl-3">', '</small>'); ?>
-                            </div>
+                            </div> -->
                             <div class=" form-group mb-3">
                                 <input type="text" class="form-control " id="wa_penyedia" placeholder="Link Whatsapp" name="wa_penyedia" value="<?= set_value('wa_penyedia') ?>">
                                 <?= form_error('wa_penyedia', ' <small class="text-danger pl-3">', '</small>'); ?>
