@@ -1,0 +1,39 @@
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+            <!-- Page Heading -->
+            <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
+
+            <?php
+            $key = $keyword;
+            $this->db->select('*');
+            $this->db->from('barang');
+            $this->db->group_start();
+            $this->db->like('nama_barang', $key);
+            $this->db->or_like('tipe', $key);
+            $this->db->or_like('penyedia', $key);
+            $this->db->group_end();
+
+            $query = $this->db->get()->result_array();
+            // $tipe = 'Aksesoris';
+            // $queryProduk = "SELECT * FROM `barang`
+            //                 WHERE `tipe` = 'Aksesoris'
+            //                 ORDER BY `id_brg` ASC";
+            // $produk = $this->db->query($queryProduk)->result_array();
+            ?>
+
+            <?php foreach ($query as $p) : ?>
+                <a href="" class="produkk mx-3" style="display:inline-block">
+                    <div class="card my-3 border-dark" style="width: 18rem; text-decoration:none;">
+                        <img class="card-img-top" src="<?= base_url('assets/img/product/') . $p['foto']; ?>" style="width: 100%;height: 20vw; object-fit: cover;">
+                        <div class="card-img-overlay" style="font-weight:bold;color: black">
+                            <h3 class="card-text"><?= $p['nama_barang']; ?></h3>
+                        </div>
+                    </div>
+                </a>
+            <?php endforeach; ?>
+        </div>
+        <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->

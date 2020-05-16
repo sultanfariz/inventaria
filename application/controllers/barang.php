@@ -150,18 +150,20 @@ class Barang extends CI_Controller
 
     public function search()
     {
-        if ($this->input->post('submit')) {
-            $keyword = htmlspecialchars($this->input->post('search', true));
-            $data['keyword'] = $keyword;
-        } else {
-            $keyword = null;
-            $data['keyword'] = $keyword;
-        }
+        $data['title'] = 'Search';
+        $data['users'] = $this->db->get_where('users', [
+            'username' => $this->session->userdata('username')
+        ])->row_array();
+
+
+        $keyword = htmlspecialchars($this->input->post('search', true));
+        $data['keyword'] = $keyword;
+
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
-        $this->load->view('barang/index', $data);
+        $this->load->view('barang/search', $data);
         $this->load->view('templates/footer', $data);
     }
 }
