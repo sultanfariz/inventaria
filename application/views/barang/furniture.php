@@ -7,7 +7,7 @@
             <?php
             // $tipe = $this->session->userdata('role_id');
             $queryProduk = "SELECT * FROM `barang`
-                            
+                            WHERE `tipe` = 'Furniture'
                             ORDER BY `id_brg` ASC";
             $produk = $this->db->query($queryProduk)->result_array();
             ?>

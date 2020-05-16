@@ -1,9 +1,33 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
+            <div class="row">
+                <!-- Page Heading -->
+                <div class="card o-hidden border-0 shadow-lg my-5 col-lg-7 mx-auto py-2" style="max-width:400px">
+                    <div class="card-header">
+                        <div class="text-center">
+                            <h1 class="h3" style="color: black"><?= $title; ?></h1>
+                        </div>
+                    </div>
+                    <div class="card-body p-0 my-3">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg">
 
-            <!-- Page Heading -->
-            <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
+                                <h5 class="card-text">
+                                    <?= $users['firstname'] . " " . $users['lastname']; ?>
+                                </h5>
+                                <h5 class="card-text">
+                                    <?= $users['username']; ?>
+                                </h5>
+                                <h5 class="card-text">
+                                    <?= $users['email']; ?>
+                                </h5>
 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- /.container-fluid -->
 

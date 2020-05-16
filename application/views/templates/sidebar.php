@@ -2,7 +2,7 @@
         <ul class="sidebarr navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('barang/produk'); ?>">
                 <!-- <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div> -->
@@ -63,9 +63,15 @@
                     Produk
                 </div>
 
+                <li class="nav-item">
+                    <a class=" ling nav-link collapsed" href="<?= base_url('barang/produk'); ?>">
+                        <!-- <i class="fas fa-fw fa-cog"></i> -->
+                        <span>Produk</span>
+                    </a>
+                </li>
                 <!-- Nav Item - Pages Collapse Menu -->
                 <li class="nav-item">
-                    <a class=" ling nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <a class=" ling nav-link collapsed" href="<?= base_url('barang/elektronik'); ?>">
                         <!-- <i class="fas fa-fw fa-cog"></i> -->
                         <span>Elektronik</span>
                     </a>
@@ -73,21 +79,24 @@
 
                 <!-- Nav Item - Utilities Collapse Menu -->
                 <li class="nav-item">
-                    <a class=" ling nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                    <a class=" ling nav-link collapsed" href="<?= base_url('barang/furniture') ?>">
+
                         <!-- <i class="fas fa-fw fa-wrench"></i> -->
                         <span>Furniture</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="ling nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                    <a class="ling nav-link collapsed" href="<?= base_url('barang/transportasi') ?>">
+
                         <!-- <i class="fas fa-fw fa-wrench"></i> -->
                         <span>Transportasi</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="ling nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                    <a class="ling nav-link collapsed" href="<?= base_url('barang/aksesoris') ?>">
+
                         <!-- <i class="fas fa-fw fa-wrench"></i> -->
                         <span>Aksesoris</span>
                     </a>
@@ -112,7 +121,7 @@
 
                 <!-- Nav Item - Charts -->
                 <li class="nav-item">
-                    <a class=" ling nav-link" href="charts.html">
+                    <a class=" ling nav-link" href="<?= base_url('user'); ?>">
                         <!-- <i class="fas fa-fw fa-user"></i> -->
                         <span>Profile</span></a>
                 </li>

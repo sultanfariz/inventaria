@@ -5,9 +5,13 @@
             <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
 
             <?php
-            // $tipe = $this->session->userdata('role_id');
+            // $this->db->select('*');
+            // $this->db->from('barang');
+            // $this->db->like('tipe', 'Aksesoris');
+            // $query = $this->db->get()->result_array();
+            // $tipe = 'Aksesoris';
             $queryProduk = "SELECT * FROM `barang`
-                            
+                            WHERE `tipe` = 'Elektronik'
                             ORDER BY `id_brg` ASC";
             $produk = $this->db->query($queryProduk)->result_array();
             ?>
