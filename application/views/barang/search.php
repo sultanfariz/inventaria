@@ -23,7 +23,7 @@
             ?>
 
             <?php foreach ($query as $p) : ?>
-                <a href="" class="produkk mx-3" style="display:inline-block">
+                <a href="<?= base_url('barang/detail/' . $p['id_brg']); ?>" class="produkk mx-3" style="display:inline-block">
                     <div class="card my-3 border-dark" style="width: 18rem; text-decoration:none;">
                         <img class="card-img-top" src="<?= base_url('assets/img/product/') . $p['foto']; ?>" style="width: 100%;height: 20vw; object-fit: cover;">
                         <div class="card-img-overlay" style="font-weight:bold;color: black">

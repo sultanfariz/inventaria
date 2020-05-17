@@ -110,7 +110,7 @@ class Barang extends CI_Controller
         $this->form_validation->set_rules('harga', 'Harga Barang', 'required|trim');
         // $this->form_validation->set_rules('nomor_penyedia', 'Kontak Penyedia', 'required|trim');
         $this->form_validation->set_rules('wa_penyedia', 'Link Whatsapp', 'required|trim');
-        // $this->form_validation->set_rules('foto', 'Foto', 'required|trim');
+        $this->form_validation->set_rules('deskripsi', 'Deskripsi Barang', 'required');
 
         if ($this->form_validation->run() == false) {
             $data['title'] = 'Tambah Produk';
@@ -123,7 +123,7 @@ class Barang extends CI_Controller
             $foto = $_FILES["foto"]["name"];
             if ($foto) {
                 $config['allowed_types'] = 'gif|jpg|png';
-                $config['max_size'] = '3000';
+                $config['max_size'] = '10000';
                 $config['upload_path'] = './assets/img/product';
                 $this->load->library('upload', $config);
 
@@ -138,7 +138,8 @@ class Barang extends CI_Controller
                 'harga' => htmlspecialchars($this->input->post('harga', true)),
                 'nomor_penyedia' => htmlspecialchars($this->input->post('nomor_penyedia', true)),
                 'wa_penyedia' => htmlspecialchars($this->input->post('wa_penyedia', true)),
-                'foto' => $foto
+                'foto' => $foto,
+                'deskripsi' => htmlspecialchars($this->input->post('deskripsi', true))
             ];
 
             $this->db->insert('barang', $data);
@@ -164,6 +165,25 @@ class Barang extends CI_Controller
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
         $this->load->view('barang/search', $data);
+        $this->load->view('templates/footer', $data);
+    }
+
+    public function detail($id_brg)
+    {
+        $data['title'] = 'Detail';
+        $data['users'] = $this->db->get_where('users', [
+            'username' => $this->session->userdata('username')
+        ])->row_array();
+
+        // $keyword = $this->db->get_where('barang', [
+        //     'id_brg' => $id_brg
+        // ]);
+        $data['keyword'] = $id_brg;
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('barang/detail', $data);
         $this->load->view('templates/footer', $data);
     }
 }

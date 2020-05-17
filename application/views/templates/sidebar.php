@@ -66,7 +66,7 @@
                 <li class="nav-item">
                     <a class=" ling nav-link collapsed" href="<?= base_url('barang/produk'); ?>">
                         <!-- <i class="fas fa-fw fa-cog"></i> -->
-                        <span>Produk</span>
+                        <span>All Product</span>
                     </a>
                 </li>
                 <!-- Nav Item - Pages Collapse Menu -->

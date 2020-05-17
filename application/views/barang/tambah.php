@@ -31,7 +31,7 @@
                             <?= form_error('tipe', ' <small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class=" form-group hidden">
-                            <input type="hidden" class="form-control " id="penyedia" placeholder="Penyedia Barang" name="penyedia" value="<?= $users['firstname'] . " " . $users['lastname'] ?>">
+                            <input type="hidden" class="form-control " id="penyedia" placeholder="Penyedia Barang" name="penyedia" value="<?= $users['username'] ?>">
                         </div>
                         <div class=" form-group">
                             <input type="text" class="form-control " id="harga" placeholder="Harga Barang" name="harga" value="<?= set_value('harga') ?>">
@@ -55,7 +55,7 @@
 
                         <!-- Deskripsi Barang -->
                         <div class=" form-group mb-3">
-                            <input type="text" class="form-control " id="deskripsi" placeholder="Deskripsi Barang" name="deskripsi" value="<?= set_value('deskripsi') ?>">
+                            <textarea class="form-control " id="deskripsi" placeholder="Deskripsi Barang" name="deskripsi" value="<?= set_value('deskripsi') ?>" rows="10"></textarea>
                             <?= form_error('deskripsi', ' <small class="text-danger pl-3">', '</small>'); ?>
                         </div>
 

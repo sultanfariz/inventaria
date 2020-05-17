@@ -10,6 +10,10 @@
     <meta name="author" content="">
 
     <style>
+        body {
+            background-color: #f1f1f1 !important;
+        }
+
         /* .sidebarr {
             width: 0 !important;
             display: hidden !important;
