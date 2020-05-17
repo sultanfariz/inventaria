@@ -121,7 +121,7 @@
 
                 <!-- Nav Item - Charts -->
                 <li class="nav-item">
-                    <a class=" ling nav-link" href="<?= base_url('user'); ?>">
+                    <a class=" ling nav-link" href="<?= base_url('barang/user'); ?>">
                         <!-- <i class="fas fa-fw fa-user"></i> -->
                         <span>Profile</span></a>
                 </li>

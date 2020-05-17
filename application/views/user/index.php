@@ -32,7 +32,6 @@
                                 <h5 class="card-text">
                                     <label> Alamat : </label>
                                     <?= $users['address']; ?>
-                                </h5>
 
                             </div>
                         </div>

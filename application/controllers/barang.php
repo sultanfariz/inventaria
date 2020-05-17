@@ -7,6 +7,7 @@ class Barang extends CI_Controller
     {
         parent::__construct();
         $this->load->library('form_validation');
+        $this->load->library('cart');
     }
 
     public function produk()
@@ -184,6 +185,70 @@ class Barang extends CI_Controller
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
         $this->load->view('barang/detail', $data);
+        $this->load->view('templates/footer', $data);
+    }
+
+    public function keranjang($id_brg)
+    {
+        $data['title'] = 'Keranjang';
+        $data['users'] = $this->db->get_where('users', [
+            'username' => $this->session->userdata('username')
+        ])->row_array();
+
+        $keyword = $this->db->get_where('barang', [
+            'id_brg' => $id_brg
+        ])->row_array();
+
+        $cart = [
+            'id'    => $id_brg,
+            'qty'   => 1,
+            'price' => $keyword['harga'],
+            'name'  => $keyword['nama_barang']
+        ];
+
+
+        $this->cart->insert($cart);
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+        Produk berhasil ditambahkan ke keranjang.</div>');
+        redirect('barang/produk');
+    }
+
+    public function cart()
+    {
+        $data['title'] = 'Keranjang';
+        $data['users'] = $this->db->get_where('users', [
+            'username' => $this->session->userdata('username')
+        ])->row_array();
+
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('barang/cart', $data);
+        $this->load->view('templates/footer', $data);
+    }
+
+    public function clearcart()
+    {
+        $this->cart->destroy();
+        $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
+        Keranjang berhasil dibersihkan.</div>');
+        redirect('barang/produk');
+    }
+
+    public function user()
+    {
+        $data['title'] = 'Profile';
+        $data['users'] = $this->db->get_where('users', [
+            'username' => $this->session->userdata('username')
+        ])->row_array();
+
+
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('user/index', $data);
         $this->load->view('templates/footer', $data);
     }
 }

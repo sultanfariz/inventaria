@@ -12,6 +12,7 @@
             $this->db->like('nama_barang', $key);
             $this->db->or_like('tipe', $key);
             $this->db->or_like('penyedia', $key);
+            $this->db->or_like('deskripsi', $key);
             $this->db->group_end();
 
             $query = $this->db->get()->result_array();
