@@ -74,3 +74,12 @@ Target usernya adalah masyarakat Kecamatan Dramaga kabupaten Bogor yang sedang m
 ## ERD
 ![ERD](https://user-images.githubusercontent.com/60084292/82154733-fc633600-9899-11ea-9daa-91003408e525.PNG)
 
+## Hasil Implementasi Perangkat Lunak
+### Login
+![login](https://user-images.githubusercontent.com/44494446/82228937-fd589e00-9953-11ea-870b-46217f94a542.jpg)
+### Daftar
+![signup](https://user-images.githubusercontent.com/44494446/82228983-09dcf680-9954-11ea-8388-c44070f26128.jpg)
+### Login error
+![login_error](https://user-images.githubusercontent.com/44494446/82229023-14978b80-9954-11ea-90c0-cab3dd823def.jpg)
+### Daftar error
+![signup_error](https://user-images.githubusercontent.com/44494446/82229005-0fd2d780-9954-11ea-8c93-d75808a85dae.jpg)
