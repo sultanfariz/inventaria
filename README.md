@@ -79,6 +79,20 @@ Target usernya adalah masyarakat Kecamatan Dramaga kabupaten Bogor yang sedang m
 ![login](https://user-images.githubusercontent.com/44494446/82228937-fd589e00-9953-11ea-870b-46217f94a542.jpg)
 ### Daftar
 ![signup](https://user-images.githubusercontent.com/44494446/82228983-09dcf680-9954-11ea-8388-c44070f26128.jpg)
+### Tambah Barang
+![tambah_barang](https://user-images.githubusercontent.com/44494446/82233066-a229aa00-9959-11ea-8dca-186af995c1c8.png)
+### Detail Barang
+![detail2](https://user-images.githubusercontent.com/44494446/82232917-71497500-9959-11ea-8baf-832bbbf73a16.png)
+### Barang Saya
+![barang_lama](https://user-images.githubusercontent.com/44494446/82233054-99d16f00-9959-11ea-8bbb-e9ec2ed3bd76.png)
+### Edit Barang
+![form_edit](https://user-images.githubusercontent.com/44494446/82232963-81f9eb00-9959-11ea-951b-1e1f39d7446e.png)
+### Cari Barang
+![Search](https://user-images.githubusercontent.com/44494446/82233092-a950b800-9959-11ea-8015-d3013a82b150.png)
+### Profil
+![profil](https://user-images.githubusercontent.com/44494446/82233130-b7063d80-9959-11ea-93af-8ad4362d89d9.png)
+### Logout
+![logiut](https://user-images.githubusercontent.com/44494446/82233115-af469900-9959-11ea-94a9-134963616b76.png)
 ### Login error
 ![login_error](https://user-images.githubusercontent.com/44494446/82229023-14978b80-9954-11ea-90c0-cab3dd823def.jpg)
 ### Daftar error
