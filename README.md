@@ -79,10 +79,20 @@ Target usernya adalah masyarakat Kecamatan Dramaga kabupaten Bogor yang sedang m
 ![login](https://user-images.githubusercontent.com/44494446/82228937-fd589e00-9953-11ea-870b-46217f94a542.jpg)
 ### Daftar
 ![signup](https://user-images.githubusercontent.com/44494446/82228983-09dcf680-9954-11ea-8388-c44070f26128.jpg)
+### Dashboard
+![dashboard](https://user-images.githubusercontent.com/44494446/82234914-414fa100-995c-11ea-9ffd-0bb8af9396ef.png)
 ### Tambah Barang
 ![tambah_barang](https://user-images.githubusercontent.com/44494446/82233066-a229aa00-9959-11ea-8dca-186af995c1c8.png)
 ### Detail Barang
 ![detail2](https://user-images.githubusercontent.com/44494446/82232917-71497500-9959-11ea-8baf-832bbbf73a16.png)
+### Tambah ke Keranjang
+![tambahkeranjang](https://user-images.githubusercontent.com/44494446/82235329-c20e9d00-995c-11ea-985f-896725ea0350.png)
+### Keranjang
+![keranjang](https://user-images.githubusercontent.com/44494446/82235089-7956e400-995c-11ea-91ab-5fd579e3d7e6.png)
+### Bersihkan Keranjang
+![bersihkan](https://user-images.githubusercontent.com/44494446/82235170-92f82b80-995c-11ea-90b4-ae3f810edbff.png)
+### Kirim Pesan
+![message](https://user-images.githubusercontent.com/44494446/82234541-bec6e180-995b-11ea-89c4-bf72ea69f4dc.png)
 ### Barang Saya
 ![barang_lama](https://user-images.githubusercontent.com/44494446/82233054-99d16f00-9959-11ea-8bbb-e9ec2ed3bd76.png)
 ### Edit Barang
