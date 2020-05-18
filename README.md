@@ -37,6 +37,8 @@ Inventaria adalah sebuah platform berbasis web atau aplikasi pihak ketiga untuk 
 Target usernya adalah masyarakat Kecamatan Dramaga kabupaten Bogor yang sedang mengadakan suatu acara atau event dan membutuhkan barang-barang untuk keperluan logistik.
 
 ## User Story
+- Sebagai pengguna Saya ingin bisa Menyewa Barang karena Saya ingin menggunakan barang tersebut hanya untuk Suatu Acara saja.
+- Sebagai pengguna Saya ingin Menyewakan Barang yang Saya miliki karena Saya ingin barang yang saya miliki nganggur tidak terpakai.
 
 ## Use Case Diagram
 ![Use-case inventaria](https://user-images.githubusercontent.com/60084292/82154141-26b2f480-9896-11ea-86d9-7a56fb47c8b1.PNG)
