@@ -103,6 +103,8 @@ Target usernya adalah masyarakat Kecamatan Dramaga kabupaten Bogor yang sedang m
 ![profil](https://user-images.githubusercontent.com/44494446/82233130-b7063d80-9959-11ea-93af-8ad4362d89d9.png)
 ### Logout
 ![logiut](https://user-images.githubusercontent.com/44494446/82233115-af469900-9959-11ea-94a9-134963616b76.png)
+### Logout Berhasil
+![logot_berhasil](https://user-images.githubusercontent.com/44494446/82236932-0ef37300-995f-11ea-9fe3-52d31e537f0d.png)
 ### Login error
 ![login_error](https://user-images.githubusercontent.com/44494446/82229023-14978b80-9954-11ea-90c0-cab3dd823def.jpg)
 ### Daftar error
