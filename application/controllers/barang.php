@@ -251,4 +251,104 @@ class Barang extends CI_Controller
         $this->load->view('user/index', $data);
         $this->load->view('templates/footer', $data);
     }
+
+    public function edit()
+    {
+        $data['title'] = 'Edit Produk';
+        $data['users'] = $this->db->get_where('users', [
+            'username' => $this->session->userdata('username')
+        ])->row_array();
+        // $data['produk'] = $this->db->get('barang')->result_array();
+        // $data['barang'] = $this->modelbrg->showbrg()->result();
+
+
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('barang/edit', $data);
+        $this->load->view('templates/footer', $data);
+    }
+
+    public function update($id)
+    {
+        $data['title'] = 'Edit Produk';
+        $data['users'] = $this->db->get_where('users', [
+            'username' => $this->session->userdata('username')
+        ])->row_array();
+
+        $data['produk'] = $this->db->get_where('barang', [
+            'id_brg' => $id
+        ])->row_array();
+
+        $this->form_validation->set_rules('nama_barang', 'Nama Barang', 'required|trim');
+        // $this->form_validation->set_rules('tipe', 'Tipe Barang', 'required|trim');
+        $this->form_validation->set_rules('harga', 'Harga Barang', 'required|trim');
+        // $this->form_validation->set_rules('nomor_penyedia', 'Kontak Penyedia', 'required|trim');
+        $this->form_validation->set_rules('wa_penyedia', 'Link Whatsapp', 'required|trim');
+        $this->form_validation->set_rules('deskripsi', 'Deskripsi Barang', 'required');
+
+        if ($this->form_validation->run() == false) {
+            $data['title'] = 'Edit Produk';
+            $this->load->view('templates/header', $data);
+            $this->load->view('templates/sidebar', $data);
+            $this->load->view('templates/topbar', $data);
+            $this->load->view('barang/update', $data);
+            $this->load->view('templates/footer', $data);
+        } else {
+            $foto = $_FILES["foto"]["name"];
+            if ($foto) {
+                $config['allowed_types'] = 'gif|jpg|png';
+                $config['max_size'] = '10000';
+                $config['upload_path'] = './assets/img/product';
+                $this->load->library('upload', $config);
+
+                if ($this->upload->do_upload('foto')) {
+                    $foto = $this->upload->data('file_name');
+                }
+            }
+            $data = [
+                'nama_barang' => htmlspecialchars($this->input->post('nama_barang', true)),
+                'tipe' => $this->input->post('tipe', true),
+                'penyedia' => htmlspecialchars($this->input->post('penyedia', true)),
+                'harga' => htmlspecialchars($this->input->post('harga', true)),
+                'nomor_penyedia' => htmlspecialchars($this->input->post('nomor_penyedia', true)),
+                'wa_penyedia' => htmlspecialchars($this->input->post('wa_penyedia', true)),
+                'foto' => $foto,
+                'deskripsi' => htmlspecialchars($this->input->post('deskripsi', true))
+            ];
+
+            $this->db->where('id_brg', $id);
+            $this->db->update('barang', $data);
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+            Produk berhasil diupdate</div>');
+            redirect('barang/edit');
+        }
+    }
+
+    public function deletebrg($id)
+    {
+        $data['title'] = 'Delete Produk';
+        $data['users'] = $this->db->get_where('users', [
+            'username' => $this->session->userdata('username')
+        ])->row_array();
+
+        $data['produk'] = $this->db->get_where('barang', [
+            'id_brg' => $id
+        ])->row_array();
+
+
+        $hapus = array('id_brg' => $id);
+        $this->db->where($hapus);
+        $this->db->delete('barang');
+        // $this->db->get_where('barang', [
+        //     'id_brg' => $id
+        // ]);
+        // $this->db->where('id_brg', $id);
+        // $this->db->delete($hapus);
+        $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
+            Produk berhasil dihapus</div>');
+        redirect('barang/edit');
+        // }
+    }
 }

@@ -2,6 +2,10 @@
     <h4 class="mb-5">Keranjang</h4>
 
     <div align="right">
+        <a href="#" class="mb-2">
+            <div class="btn btn-md btn-success mb-2">Pembayaran</div>
+        </a>
+
         <a href="<?= base_url('barang/clearcart'); ?>" class="mb-2">
             <div class="btn btn-md btn-danger mb-2">Bersihkan Keranjang</div>
         </a></div>
